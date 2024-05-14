@@ -20,7 +20,7 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-position:fixed;
+position:absolute;
 top:0;
 bottom:0;
 left:${props=>props.Direction=='left' && "10px"};
@@ -78,10 +78,10 @@ function Slider() {
     const clickHandler=(dir)=>{
 
         if(dir=="left"){
-            setSlideIndex(slideIndex>0?slideIndex-1:2)
+            setSlideIndex(slideIndex>0?slideIndex-1:3)
         }
         else{
-            setSlideIndex(slideIndex<2?slideIndex+1:0)
+            setSlideIndex(slideIndex<3?slideIndex+1:0)
         }
     }
     return (

@@ -89,7 +89,7 @@ font-weight:500
             <Input></Input></SearchContainer>
          
             </Left>
-        <Center><Logo>Creative Solutions</Logo></Center>
+        <Center><Logo>MyChoice</Logo></Center>
         <Right>
             <MenueItems>Register</MenueItems>
             <MenueItems>Login</MenueItems>

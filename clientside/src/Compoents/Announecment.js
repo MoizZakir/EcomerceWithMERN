@@ -14,7 +14,7 @@ const Announecment = () => {
     `
   return (
     <div>
-        <Container>kali linux is very good operating system
+        <Container>Super Deal .Buy More upto 2000/- and get free dilvery All over Karachi
             </Container></div>
   )
 }

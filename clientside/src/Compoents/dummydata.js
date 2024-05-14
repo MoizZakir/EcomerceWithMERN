@@ -28,3 +28,34 @@ export  const  data=[
         
     }
 ]
+
+export const catgr =[
+    {id:1,title:'Shirt Style',
+        img:'https://saeedghani.pk/cdn/shop/files/Footcarecream.jpg?v=1711118436'
+    },
+    {id:1,title:'Shirt Style',
+    img:'https://saeedghani.pk/cdn/shop/files/Footcarecream.jpg?v=1711118436'
+},{id:1,title:'Shirt Style',
+img:'https://saeedghani.pk/cdn/shop/files/Footcarecream.jpg?v=1711118436'
+},{id:1,title:'Shirt Style',
+img:'https://saeedghani.pk/cdn/shop/files/Footcarecream.jpg?v=1711118436'
+}
+]
+export const products=[{
+    id:1,
+    img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'
+},
+{id:2,img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'},
+{
+    id:3,
+    img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'
+},{
+    id:4,
+    img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'
+},{
+    id:5,
+    img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'
+},{
+    id:6,
+    img:'https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1974727070.jpg'
+}]
