@@ -8,4 +8,4 @@ const UserSchema=new mongoose.Schema({
         default:false
     }
 },{timestamps:true})
-module.exports=mongoose.model('EcomerceUsers',UserSchema)
+export default mongoose.model('EcomerceUsers',UserSchema)
