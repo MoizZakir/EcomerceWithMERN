@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from './Responsive'
 const Container=styled.div`
 height:100vh;
 width:100vw;
@@ -11,6 +12,7 @@ background-color:gray;
 `
 const Wrapper=styled.div`
 width:40%;
+${mobile({width:"75%"})};
 padding:20px;
 background-color:white
 `
@@ -29,6 +31,7 @@ flex-wrap:wrap;
 const Input=styled.input`
 flex:1;
 min-width:40%;
+
 margin:20px 10px 0px 0px;
 padding:10px;
 

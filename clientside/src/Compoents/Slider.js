@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io'
 import styled from 'styled-components'
 import { data } from './dummydata'
+import { mobile } from '../Pages/Responsive'
 const Container=styled.div`
 sidth:100vw;
 height:100vh;
 display:flex;
+overflow: hidden;
 position:relative;
-oveflow:hidden;
+
+${mobile({display:"none"})}
 
 `
 

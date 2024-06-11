@@ -5,8 +5,10 @@ import { IoLogoFacebook } from 'react-icons/io5'
 import { LuInstagram } from 'react-icons/lu'
 import { MdEmail } from 'react-icons/md'
 import styled from 'styled-components'
+import { mobile } from '../Pages/Responsive'
 const Container=styled.div`
 display:flex;
+${mobile({flexDirection:"column"})}
 
 `
 const Left=styled.div`
@@ -14,7 +16,8 @@ flex:1;
 display:flex;
 flex-direction:column;
 padding:20px`
-const Logo=styled.h2``
+const Logo=styled.h2`
+`
 const Desc=styled.p`
 margin:20px 0;
 
@@ -59,7 +62,8 @@ margin-bottom:10px;
 `
 const Right=styled.div`
 flex:1;
-padding:20px;`
+padding:20px;
+${mobile({backfroundColor:`#fff8f8`})}`
 
 const ContactItem=styled.div`
 margin-bottom:10px;

@@ -5,6 +5,7 @@ import Announecment from '../Compoents/Announecment'
 import Products from '../Compoents/Products'
 import NewsLetter from '../Compoents/NewsLetter'
 import Footer from '../Compoents/Footer'
+import { mobile } from './Responsive'
 const Container=styled.div`
 `
 
@@ -14,15 +15,18 @@ const FilterContainer=styled.div`
 display:flex;
 justify-content:space-between`
 const Filter=styled.div`
-margin:20px;`
+margin:20px;
+${mobile({display:"flex",flexDirection:'column',width:"0px 20px"})}`;
 const FilterText=styled.span`
 font-size:20px;
 font-weight:600;
 margin-right:20px;
+${mobile({margin:"0px"})};
 `
 const Select=styled.select`
 margin-right:20px;
-padding:10px`
+padding:10px
+${mobile({margin:"10px 0px"})};`
 const Option=styled.option``
 
 const ProductList = () => {

@@ -4,10 +4,12 @@ import styled from 'styled-components'
 import Announecment from '../Compoents/Announecment'
 import Footer from '../Compoents/Footer'
 import { IoIosAdd, IoIosRemove } from 'react-icons/io'
+import { mobile } from './Responsive'
 const Container=styled.div``
 
 const Wrapper=styled.div`
 padding:20px;
+${mobile({padding:"10px"})}
 
 `
 const Title=styled.h1`
@@ -21,6 +23,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:20px;
+${mobile({display:"none"})}
 
 
 `
@@ -30,7 +33,7 @@ font-weight:600;
 cursor:pointer;
 border:${(props)=>props.type== 'filled'& 'none'};
 background-color:${(props)=>props.type== 'filled' ? 'black': 'transparent'};
-color:${(props)=>props.type== 'filled'& 'white'};
+color:${(props)=>props.type== 'filled' & 'white'};
 
 `
 
@@ -45,6 +48,7 @@ const Bottom=styled.div`
 padding:20px;
 display:flex;
 justify-context:space-between;
+${mobile({flexDirection:"column"})}
 
 
 `
@@ -52,7 +56,12 @@ const Info=styled.div`
 flex:3
 `
 const Summary=styled.div`
-flex:1
+flex:1;
+border:0.5px solid gray;
+border-radius:10px;
+padding:20px;
+height:55vh;
+
 `
 const Product=styled.div`
 display:flex;
@@ -103,14 +112,40 @@ align-items:center;`
 const ProductAmmount=styled.div`
 font-size:24px;
 margin:5px;
+${mobile({margin:'5px 15px'})}
 `
 const ProductPrice=styled.div`
 font-size:30px;
 font-weight:200;
+${mobile({marginBottom:'10px'})}
 `
 const Hr=styled.hr`
 background-color:#eee;
-border:none`
+border:none;
+height:1px`
+
+const SummaryTitle=styled.h1`
+font-weight:200;
+`
+const SummaryItem=styled.div`
+margin:30px 0px;
+
+display:flex;
+justify-content:space-between;
+font-weight:${(props)=>props.type=='total' && '500'};
+font-size:${(props)=>props.type=='total' && '24px'};
+
+`
+const SummaryItemsText=styled.span`
+`
+const SummaryItemsPrice=styled.span`
+`
+const SummaryButton=styled.button`
+width:100%;
+padding:10px;
+background-color:black;
+color:white;
+`
 
 const Cart = () => {
   return (
@@ -171,7 +206,30 @@ const Cart = () => {
 </Product>
 
 </Info>
-<Summary>summary</Summary>
+<Summary>
+
+<SummaryTitle>
+    Order Summary
+</SummaryTitle>
+<SummaryItem>
+<SummaryItemsText>kuch bhi</SummaryItemsText>
+<SummaryItemsPrice>kuch bhi</SummaryItemsPrice>
+</SummaryItem>
+<SummaryItem>
+<SummaryItemsText>estimaye </SummaryItemsText>
+<SummaryItemsPrice>5$</SummaryItemsPrice>
+</SummaryItem>
+<SummaryItem>
+<SummaryItemsText>Discount</SummaryItemsText>
+<SummaryItemsPrice>60$</SummaryItemsPrice>
+</SummaryItem>
+<SummaryItem  type='total'>
+<SummaryItemsText>Subtotal</SummaryItemsText>
+<SummaryItemsPrice>60$</SummaryItemsPrice>
+</SummaryItem>
+<SummaryButton>CHECK</SummaryButton>
+
+</Summary>
 
         </Bottom>
 
