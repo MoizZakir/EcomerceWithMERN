@@ -8,7 +8,7 @@ const app=express()
 app.use(express.json())
 
 dbConnection()
-// app.use('/api/user',userRoutes)
+app.use('/api/user',userRoutes)
 app.use('/api/auth',AuthRoutes)
 
 app.listen(8000,()=>{
