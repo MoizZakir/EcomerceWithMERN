@@ -42,4 +42,4 @@ const verifyTokenAdmin=(req,res,next)=>{
     }) 
 
 }
-export { verifyTokenAuthorization,verifyTokenAdmin}
+export { verifyTokenAuthorization,verifyTokenAdmin,verifyToken}

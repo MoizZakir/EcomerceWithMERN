@@ -1,13 +1,13 @@
-import ProductSchema from '../../../models/Product.js'
+import CartSchema from '../../../models/Cart.js'
 
-//add a product
-export const productPost=async(req,res)=>{
+//add a cart
+export const cartPost=async(req,res)=>{
 
 
-    const newProduct=new ProductSchema(req.body)
+    const newCart=new CartSchema(req.body)
     try {
-        const savedProduct=await newProduct.save()
-        res.status(200).json(savedProduct)
+        const savedCart=await newCart.save()
+        res.status(200).json(savedCart)
 
     } catch (error) {
         res.status(401).json(error)
@@ -15,14 +15,14 @@ export const productPost=async(req,res)=>{
     }
 }
 
-// update a product
-export const productUpdate=async(req,res)=>{
+// update a cart
+export const cartUpdate=async(req,res)=>{
     
     try {
-     const updateProduct=await ProductSchema.findByIdAndUpdate(req.params.id,{
+     const updatecart=await CartSchema.findByIdAndUpdate(req.params.id,{
          $set:req.body
      },{new:true})
-     res.status(200).json(updateProduct)
+     res.status(200).json(updatecart)
  
     } catch (error) {
      res.status(500).json(err)
@@ -32,12 +32,12 @@ export const productUpdate=async(req,res)=>{
  
  }
 
-//delete a product
-export const productDelete=async(req,res)=>{
+//delete a cart
+export const cartDelete=async(req,res)=>{
     
     try {
-     await ProductSchema.findByIdAndDelete(req.params.id)
-     res.status(200).json("product has been delted")
+     await CartSchema.findByIdAndDelete(req.params.id)
+     res.status(200).json("cart has been delted")
  
     } catch (error) {
      res.status(500).json(err)
@@ -47,40 +47,26 @@ export const productDelete=async(req,res)=>{
  
  }
 
-//get a product
+//get a cart
 
- export const productrGet=async(req,res)=>{
+ export const cartGet=async(req,res)=>{
     try {
-        const product=await ProductSchema.findById(req.params.id)
-        res.status(200).json(product)
+        const cart=await CartSchema.findOne({userId:req.params.userId})
+        res.status(200).json(cart)
         
     } catch (error) {
         res.status(500).json(error)
         
     }
 }
-//get all product
-export const productrGetAll=async(req,res)=>{
-    const qNew=req.query.new
-    const qCategory=req.query.category
+//get all cart
+export const cartGetAll=async(req,res)=>{
+     
+      
     try {
-        let product;
-    if(qNew)
-        {
-            product= await ProductSchema.find().sort({createdAt:-1}).limit(5)
-        }
-        else if(qCategory){
-            product=await ProductSchema.find({
-                Categories:{
-                    $in:[qCategory]
-                }
-            })
-        }
-        else{
-            product=await ProductSchema.find()
-        }
-        // const product=await ProductSchema.find()
-        res.status(200).json(product)
+        const cart=await CartSchema.find()
+        res.status(200).json(cart)
+        
 
     } catch (error) {
         res.status(500).json(error)
