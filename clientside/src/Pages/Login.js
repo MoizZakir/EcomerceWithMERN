@@ -7,7 +7,13 @@ width:100vw;
 display:flex;
 align-items:center;
 justify-content:center;
-background-color:gray;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+      center;
+  background-size: cover;
 
 `
 const Wrapper=styled.div`
@@ -38,7 +44,7 @@ padding:10px;
 `
 const Agreemnet=styled.span`
 font-size:12px;
-margin:20px 0
+margin:20px 0;
 
 `
 const Button=styled.button`

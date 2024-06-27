@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { mobile } from '../Pages/Responsive'
 
 const Container=styled.div`
@@ -43,6 +44,7 @@ font-size;600
 const CatagoriesItems = ({items}) => {
   return (
     <Container>
+      <Link to={`/products/${items.cat}`}>
         <Image src={items.img}/>
         <Info>
             <Title>
@@ -50,6 +52,7 @@ const CatagoriesItems = ({items}) => {
             </Title>
             <Button>SHOP NOW</Button>
         </Info>
+      </Link>
     </Container>
   )
 }
